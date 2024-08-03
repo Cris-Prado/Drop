@@ -27,16 +27,50 @@
 }
 
 .navbar{
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--corBlack);
     width: 100%;
-    height: 60px;
+    min-height: 60px;
     padding:0 40px;
-
+    flex-direction: column;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.OrganiNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    min-height: 60px;
+}
+
+.log2{
+    display: none;
+}
+
+.Ornav{
+    display: none;
+    align-items: center;
+    justify-content:space-between;
+    min-height: 60px;
+    height: auto;
+    width: 100%;
+    border-top: 1px solid rgb(124, 124, 124);
+    background-color: black;
+}
+
+.mobileMenu{
+    display: none;
+}
+
+.text-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
 }
 
 .list{
@@ -45,6 +79,10 @@
     justify-content: center;
     gap: 10px;
     font-weight: bold;
+    border-top: 2px solid gray;
+    background-color: black;
+    width: 100vw;
+    height: 50px;
 }
 
 .link{
@@ -72,18 +110,296 @@
     display: none;
 }
 
+.pes{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px;
+    background-color: white;
+    width: 60%;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
 #busca{
-    
+    height: 35px;
+    width: 100%;
+    border: 0;
+}
+
+#busca:focus{
+    outline: none;
+}
+
+.iconbusca{
+    color: rgb(0, 0, 0);
+}
+
+.logo{
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+}
+
+.box-invisible{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 70px;
+    cursor: pointer;
+}
+
+details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.bt-user{
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    cursor: pointer;
+    right: 30px;
 }
 
 
+.cart{
+    color: #000;
+}
 
+.icox{
+    color: #000;
+    font-weight: 700;
+}
 
+option{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: red;
+    border-radius: 5px;
+    font-weight: 700;
+    width: 110px;
+    text-indent: 0.2rem;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+}
 
+option:nth-child(3){
+    top: 90px;
+}
 
-
-
+.pesmobile{
+    display: none;
+}
 
 @media (max-width: 720px) {
+    .barra-negra-head{
+        display: none;
+    }
+
+    .navbar{
+        margin-top: 0;
+        height: auto;
+    }
+
+    .OrganiNav{
+        display: none;
+    }
+
+    .Ornav{
+        display: flex;
+        border: 0;
+    }  
+
+    .log2{
+        display: flex;
+    }
+
+    .Ornav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+    }
+
+    .mobileMenu{
+        display: block;
+        cursor: pointer;
+    }
+
+    .line-item{
+        display: block;
+        width: 28px;
+        height: 3px;
+        border-radius: 2px;
+        margin: 5px auto;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.3s ease-in-out;
+    }
     
+    .mobileMenu.active .line-item:nth-child(2){
+        opacity: 0;
+    }
+    .mobileMenu.active .line-item:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .mobileMenu.active .line-item:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .list{
+        position: absolute;
+        left: -1000%;
+        gap: 0;
+        background-color: var(--corBlack);
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+        gap: 10px;
+        padding: 10px;
+        height: auto;
+        border: 0;
+        top: 0;
+        transition: all 0.7s ease-in;
+    }
+
+    .itemLink{
+        margin: 16px 0; 
+    }
+
+    .list.active{
+        top: 60px;
+        left: 0px;
+        transition: all 0.4s ease;
+    }
+
+    .pesmobile{
+        display: flex;
+        width: 95%;
+    }
+
+    .boxig{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 40px;
+        width: 95%;
+    }
+
+    .boxIt{
+        border: 1px solid white;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        background-color: white;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .gpbox{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 95%;
+    }
+
+    /*    
+    .navbar{
+        margin-top: 0;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #logo{
+        display: none;
+    }
+    .pes{
+        display: none;
+    }
+
+    .Ornav{
+        display: flex;
+    }
+    
+    .theme{
+        display: none;
+    }
+
+    .mobileMenu{
+        display: block;
+        cursor: pointer;
+    }
+
+    .line-item{
+        display: block;
+        width: 28px;
+        height: 3px;
+        border-radius: 2px;
+        margin: 5px auto;
+        background-color: rgb(255, 255, 255);
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .list{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    /*.mobileMenu.active .line-item:nth-child(2){
+        opacity: 0;
+    }
+    .mobileMenu.active .line-item:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .mobileMenu.active .line-item:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .list.active{
+        position: absolute;
+        top: -1000%;
+        gap: 0;
+        background-color: var(--pink_200);
+        text-align: center;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s;
+    }
+
+    .itemLink{
+        margin: 16px 0; 
+    }
+
+    .list.active{
+        top: 58px;
+    }*/
 }
